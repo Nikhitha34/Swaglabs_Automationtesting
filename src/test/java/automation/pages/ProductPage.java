@@ -22,7 +22,7 @@ public class ProductPage{
         System.out.println("ProductPage is verified");
     }
 
-    public void viewTotalproducts() {
+    public void verifycountoftotalproducts() {
 
         By Locator = By.cssSelector(".btn_primary.btn_inventory");
         List<WebElement> elements = driver.findElements(Locator);
@@ -31,10 +31,7 @@ public class ProductPage{
 
     }
 
-    //public void verifyProductPage(){
-    // By expected
-    // }
-    public void viewProductselected(String itemName) {
+    public void verifyselectedProducts(String itemName) {
         String addToCart = "//*[text()='" + itemName + "']//ancestor::div[@class='inventory_item_label']//following-sibling::div[@class='pricebar']/button";
         By priceAddToCartLocator = By.xpath(addToCart);
         WebElement element = driver.findElement(priceAddToCartLocator);
@@ -43,7 +40,7 @@ public class ProductPage{
         System.out.println(itemName);
     }
 
-    public void viewProductprice(String itemName) {
+    public void verifyProductprice(String itemName) {
         String priceLoc = "//*[text()='" + itemName + "']//ancestor::div[@class='inventory_item_label']//following-sibling::div[@class='pricebar']/div";
         By priceLocator = By.xpath(priceLoc);
         WebElement elementItem = driver.findElement(priceLocator);
