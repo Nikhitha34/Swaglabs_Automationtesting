@@ -16,9 +16,9 @@ public class TestSauceLabs extends BaseSetup {
         loginPage.clickLoginButton();
         ProductPage product = new ProductPage(driver);
         product.verifyProductPage();
-        product.viewTotalproducts();
-        product.viewProductselected(itemName);
-        product.viewProductprice(itemName);
+        product.verifyCountofTotalproducts();
+        product.verifySelectedProducts(itemName);
+        product.verifyProductprice(itemName);
         CartPage cartPage = new CartPage(driver);
         cartPage.openCartPage();
         cartPage.verifySelectItemInCartPage(itemName);
